@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
+
+body {
+    background-image: url(/img/fondo2.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover; ;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.s {
+    background: #269AC6;
+    position: relative;
+    height: 600px;
+    width: 360px;
+    box-shadow: 0px 0px 24px #161989;
+}
+
+.s-c {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+.r-p {
+    font-family: Raleway;
+    
+}
+
+.s-b {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+}
+
+.s-b-0 {
+    transform: rotate(45deg);
+    position: absolute;
+}
+
+.s-b-1 {
+    height: 520px;
+    width: 520px;
+    background: #FFF ;
+    top: -50px;
+    right: 120px;
+    border-radius: 0 72px 0 0;
+
+}
+
+.s-b-2 {
+    height: 220px;
+    width: 220px;
+    background: #1E53A5 ;
+    top: -172px;
+    right: 0;
+    border-radius: 32px;
+
+}
+
+.s-b-3 {
+    height: 540px;
+    width: 190px;
+    background: #FFF ;
+    top: -24px;
+    right: 0;
+    border-radius: 32px;
+
+}
+
+.s-b-4 {
+    height: 400px;
+    width: 200px;
+    background: #FFF ;
+    top: 420px;
+    right: 50px;
+    border-radius: 60px;
+
+}
+
+.login {
+    width: 320px;
+    padding: 30px;
+    padding-top: 156px;
+}
+
+.login-f {
+    padding: 20px 0px;
+    position: relative;
+}
+
+.login-i {
+    position: absolute;
+    top: 30px;
+    color: #161989;
+}
+
+.login-i2 {
+    border: none;
+    border-bottom: 2px solid #D1D1D4;
+    background: none;
+    padding: 10px;
+    padding-left: 24px;
+    font-weight: 700;
+    width: 75%;
+    transition: .2s;
+}
+
+.login-i2:active,
+.login-i2:focus,
+.login-i2:hover {
+    outline: none;
+    border-bottom-color: #161989;
+}
+
+.login-s {
+    background: #FFF;
+    font-size: 14px;
+    margin-top: 30px;
+    padding: 16px 20px;
+    border-radius: 26px;
+    border: 1px solid #D4D3E8;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #269AC6;
+    box-shadow: 0px 2px 2px #161989;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.login-s:active,
+.login-s:focus,
+.login-s:hover {
+    border-color: #269AC6;
+    outline: none;
+}
+
+.b-i {
+    font-size: 24px;
+    margin-left: auto;
+    color: #269AC6
+}
+
+.s-l {
+    position: absolute;
+    height: 140px;
+    width: 160px;
+    text-align: center;
+    bottom: 0px;
+    right: 0px;
+    color: black;
+}
+
+.s-i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-l-i {
+    padding: 20px 10px;
+    color: #269AC6;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px #269AC6;
+}
+
+.s-l-i:hover {
+    transform: scale(1.5);
+}
+
+.logo {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+    margin: auto;
+
+
+}
+
+.mensaje-error-login{
+    display: none;
+    color: #c3e3cc;
+}
+
+.mail-invalido{
+    color: red;
+}

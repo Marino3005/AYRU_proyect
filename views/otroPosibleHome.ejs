@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('./partials/head.ejs'); %>
+
+    <body>
+        <% if (logged==undefined) { %>
+            <%- include('./partials/header.ejs'); %>
+                <% } else{%>
+                    <%- include('./partials/headerUsuario.ejs'); %>
+                        <% } %>
+                            <main>
+                                <div class="sub-header">
+                                    <div class="encabezado-sub-header">
+                                        <h1 class="titulo-sub-header">La tienda en tu Casa</h1>
+                                        <h2 class="subtitulo-sub-header">Accede a los ultimos productos</h2>
+                                        <p>
+                                            Crea tu cuenta gratuita y accede a todos nuestros servicios. 
+                                            Envios gratis y atencion personalizada
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="main-main">
+                                    <div class="slideshow-container">
+                                        <% let contador=1 %>
+                                            <% showcase.forEach(producto=> { %>
+                                                <div class="mySlides fade">
+                                                    <div class="numbertext">
+                                                        <%= contador %> / <%= showcase.length %>
+                                                    </div>
+                                                    <div class="div-imagenes-carrusel">
+                                                        <img src="<%= producto.image %>" class="img-carrusel">
+                                                    </div>
+                                                    <div class="text">
+                                                        <%= producto.name %>
+                                                    </div>
+                                                    <div class="contenedor-descripcion-foto">
+                                                        <button class="boton-comprar">
+                                                            <p>Comprar</p><i
+                                                                class="fa-solid fa-square-arrow-up-right"></i>
+                                                        </button>
+                                                        <a href="/detalle/<%= producto.id %>">Mas informacion</a>
+                                                    </div>
+                                                </div>
+                                                <% contador++ %>
+                                                    <% }) %>
+                                                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                    </div>
+                                    <br>
+                                </div>
+                                <div class="dots">
+                                    <span class="dot" onclick="currentSlide(1)"></span>
+                                    <span class="dot" onclick="currentSlide(2)"></span>
+                                    <span class="dot" onclick="currentSlide(3)"></span>
+                                </div>
+                                <!-- <section class="slider"-->
+
+                                <div class="contenedor-destacados">
+
+                                    <h1 class="encabezado-secundario">Destacados del mes</h1>
+
+                                    <div class="destacados">
+                                        <% let contadorTarjeta = 0 %>
+                                        <%- include('./partials/card.ejs', {contadorTarjeta}); %>
+                                    </div>
+                                    <div class="contenedor-inferior-destacados">
+                                        <h1 class="encabezado-secundario">Ofertas del mes</h1>
+                                        <div class="destacados2">
+                                            <% let contadorTarjeta2 = 5 %>
+                                            <% ofertas.forEach(producto => { %>
+                                                <div class="contenedor-imagen">
+                                                    <div class="imagen-producto-contenedor">
+                                                        <img src="<%= producto.image %> " alt="Imagen Producto" class="imagen-destacada">
+                                                    </div>
+                                                    <div class="descripcion-destacado">
+                                                        <h3><%= producto.name %> </h3>
+                                                        <p class="productoPrecio" id="precioTarjeta<%= contadorTarjeta2 %>">$<%= producto.price %> </p>
+                                                        <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
+                                                    </div>
+                                                </div>
+                                                <% contadorTarjeta2++ %>
+                                                <% console.log(contadorTarjeta) %>
+
+                                            <%  }); %> 
+                                        </div>
+                                    </div>
+
+                                    <div class="mas-productos">
+                                        <p class="encabezado-mas-productos"><a href="/productos/0">Mas productos</a></p>
+                                    </div>
+                                </div>
+                            </main>
+                            <%- include('./partials/footer.ejs'); %>
+
+
+                                <script src="https://kit.fontawesome.com/6cd48854d2.js"
+                                    crossorigin="anonymous"></script>
+                                <script src="./js/carrusel.js"></script>
+                                <script src="/js/card.js"></script>
+                                <!-- <script src="/js/header.js"></script> -->
+
+    </body>
+
+</html>

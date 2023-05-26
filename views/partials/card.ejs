@@ -1,0 +1,16 @@
+
+    <% productos.forEach(producto => { %>
+        <div class="contenedor-imagen">
+            <div class="imagen-producto-contenedor">
+                <img src="<%= producto.image %> " alt="Imagen Producto" class="imagen-destacada">
+            </div>
+            <div class="descripcion-destacado">
+                <h3><%= producto.name %> </h3>
+                <p class="productoPrecio" id="precioTarjeta<%= contadorTarjeta %>">$<%= producto.price %> </p>
+                <a href="/detalle/<%= producto.id %> "><button class="boton" type="submit">Conoce más</button></a>
+            </div>
+        </div>
+        <%  contadorTarjeta++ %>
+    <%  }); %> 
+
+

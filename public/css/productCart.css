@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(/img/fondo4.png);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+margin: 0px;
+}
+
+
+.destacado{
+    font-weight: 400;
+    text-align: center;
+}
+
+
+a{
+    text-decoration: none; 
+    color: #222222;
+}
+
+.titular{
+    font-size: 24px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+main{
+    margin-bottom: 50px;
+    min-height: 600px;
+}
+
+.contenedor-tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: 90%;
+    display: flex;
+    border: solid 3px black;
+    border-radius: 5px;
+    background-color: #c6ceef;
+    margin-bottom: 15px;
+}
+
+.productos{
+    width: 100px;
+    border: solid 1px black;
+    margin: 6px 10px 6px 6px;
+}
+
+.descripcion-producto{
+    width: 100%;
+}
+
+.titulo-tarjeta{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    margin-left: 3px;
+}
+
+.subtitulo-tarjeta{
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #706c6c;
+    width: 50%;
+    margin-left: 3px;
+}
+
+.etiqueta-precio{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.etiqueta-precio p{
+    margin: 0 3px;
+}
+
+.etiqueta-precio select{
+    width: 17%;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contenedor-envio{
+    background-color: #848ec7;
+    padding: 6px;
+    border: solid 3px #0c0c5f;
+}
+
+.envio{
+
+    width: 70%;
+    margin-bottom: 15px;
+}
+
+.opcion-envio{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.envio p{
+    margin: 1px 10px 1px 1px;
+}
+
+.barra-blanca{
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    width: 80px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contenedor-boton-cotizacion{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.boton-cotizacion{
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: solid 1px #0c0c5f;
+}
+
+.p-cotizacion{
+    margin: 5px;
+}
+
+.boton-escritorio{
+    display: none;
+}
+
+.opcion-envio select{
+    width: 25%;
+}
+
+.div-precio-total-cart{
+    display: flex;
+}
+
+.h2-carrito-vacio{
+    padding: 20px;
+    border: inset;
+    background-color: #ab84ed00;
+    color: darkslategray;
+}
+
+@media(min-width: 768px){
+
+    .destacado{
+        max-width: 300px;
+    }
+
+    /* .listas{
+        display: flex;
+        justify-content: space-between;
+    } */
+
+    .contenedor-main{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 20px 0px;
+        width: 90%;
+    }
+
+    .sub-main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 2px #9dc7ec;
+        border-radius: 23px;
+        background-color: #bfd1e1;
+        width: 90%;
+    }
+
+    .contenedor-dos{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contenedor-tarjetas{
+        width: 50%;
+        justify-content: center;
+    }
+
+    .card{
+        margin-bottom: 0px;
+    }
+
+    .boton-escritorio{
+        height: 9.5%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        border-radius: 3px;
+        border: solid 2px #0c0c5f;
+        background-color: #7eabb6;
+        align-items: center;
+    }
+
+    .main-main{
+            display: flex;
+            justify-content: center;
+    }
+
+}
+
+/* color: #161989;
+color: #1E53A5;
+color: #269AC6;
+color: #FFFFFF */
+
+/* #2A7F73 
+#0A9E8A*/

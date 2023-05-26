@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+<!--Iconos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<!--Tipografia-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Secular+One&display=swap" rel="stylesheet">
+
+
+
+<!-- Link CSS Header -->
+<link rel="stylesheet" href="/css/header.css">
+
+<!-- Link CSS Footer-->
+<link rel="stylesheet" href="/css/footer.css">
+
+<!-- Links CSS productCart -->
+<link rel="stylesheet" href="css/productCart.css">
+<script src="https://kit.fontawesome.com/13031a384f.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <% if (logged == undefined) { %>
+        <%- include('./partials/header.ejs'); %>
+    <% } else{%>
+        <%- include('./partials/headerUsuario.ejs'); %>
+    <% } %>
+    <main>
+        <div>
+            <p class="titular"><i class="fa-solid fa-cart-shopping"></i><strong>CARRITO DE COMPRA</strong></p>
+        </div>
+        <div class="main-main">
+            <div class="sub-main">
+                <article class="contenedor-main">
+                    <div class="contenedor-tarjetas">
+        
+                        <!-- primer Tarjeta del carrito -->
+        
+            
+                        <!-- segunda Tarjeta del carrito -->
+                        
+
+                    </div>
+                    <div class="contenedor-dos">
+                        <div class="contenedor-envio">
+                            <div class="envio">
+                                <div><p>ENVIO</p></div>
+                                <div class="opcion-envio">
+                                    <div>
+                                        <p>
+                                            <label name="pais">Pais</label>
+                                        </p>
+                                    </div>
+                                        <select for="pais" id="pais">
+                                            <option value="" selected></option>
+                                            <option value="arg">Argentina</option>
+                                            <option value="bra">Brasil</option>
+                                            <option value="par">Paraguay</option>
+                                            <option value="per">Peru</option>
+                                            <option value="chi">Chile</option>
+                                        </select>
+                                </div>
+                                <div class="opcion-envio">
+                                    <div>
+                                        <p>
+                                            <label for="provincia">Provincia</label>
+                                        </p>
+                                    </div>
+                                    <select name="provincia" id="provincia">
+                                        <option value="" selected></option>
+                                        <option value="BsAs">Buenos Aires</option>
+                                        <option value="Mis">Misiones</option>
+                                        <option value="Cor">Cordoba</option>
+                                        <option value="Chu">Chubut</option>
+                                        <option value="LaPa">La Pampa</option>
+                                    </select>
+                                </div>
+                                <div class="opcion-envio">
+                                    <div>
+                                        <p>
+                                            <label for="codigo">Codigo Postal</label>
+                                        </p>
+                                    </div>
+                                    <select name="codigo" id="codigo">
+                                        <option value="" selected></option>
+                                        <option value="1607">1607</option>
+                                        <option value="1709">1709</option>
+                                        <option value="1514">1514</option>
+                                        <option value="1424">1424</option>
+                                        <option value="8267">8267</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="contenedor-boton-cotizacion">
+                                <div class="boton-cotizacion">
+                                    <button class="p-cotizacion" id="obtener-cotizacion-carrito"><strong>Obtener Cotizacion</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contenedor-envio">
+                            <div class="envio">
+                                <div><p>TOTAL DE COMPRA</p></div>
+                                <div class="opcion-envio">
+                                    <div>
+                                        <p>Subtotal: $</p>
+                                    </div>
+                                </div>
+                                <div class="opcion-envio">
+                                    <div>
+                                        <p>Envio: $</p>
+                                    </div>
+                                </div>
+                                <div class="opcion-envio">
+                                    <div class="div-precio-total-cart">
+                                        <p>Total: $</p><p id="total-precio-cart"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contenedor-boton-cotizacion">
+                                <div class="boton-cotizacion">
+                                    <button class="p-cotizacion" id="borrar-carrito"><strong>Actualizar Carrito</strong></button>
+                                </div>
+                                <div class="boton-cotizacion">
+                                    <button class="p-cotizacion"><strong>Finalizar Compra</strong></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <%- include('./partials/footer.ejs'); %>
+    <script src="/js/funcionalidad-cart-pagina.js"></script>
+</body>
+</html>
